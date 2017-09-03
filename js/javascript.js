@@ -13,12 +13,6 @@ $(function () {
         nav_height = nav.outerHeight();
 
     $(window).on('scroll', function () {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-
         var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
@@ -70,17 +64,18 @@ $(function () {
         return false;
     })
 
-    //callback handler for form submit
+     //callback handler for form submit
     $("#contact-form").submit(function(e)
     {
         $("#contactProgress").modal("show")
-        var data = { "Email": $('#email').val(), "Name": $('#name').val(), "Message": $('#msg').val() };
+
+        var data = $("#contact-form").serialize();
+    
         $.ajax(
         {
-            url: "http://rationalgifts.cloudapp.net/api/v1/contact/lepistina",
             type: "POST",
-            data : JSON.stringify(data),
-            contentType : 'application/json'
+            url: "email.php",
+            data: data
         }).done(function( msg ) {
             $("#contactProgress").modal("hide")
             $("#contactSuccess").modal("show")
@@ -94,6 +89,5 @@ $(function () {
         e.preventDefault(); //STOP default action
         return true;
     });
-
 
 });
