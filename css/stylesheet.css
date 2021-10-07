@@ -469,17 +469,15 @@ footer {
 
 .back-to-top {
     position: fixed;
-    bottom: 2em;
+    bottom: 0.1em;
     right: 0px;
     text-decoration: none;
-    color: #343434;
-    background-color: #c8c8c8;
-    padding: 1em;
+    padding: 0.5em;
     display: none;
+    font-size: 45px;
 }
 
 .back-to-top:hover {
-    background-color: #868787;
     color: #343434;
 }
 
@@ -538,7 +536,6 @@ footer {
     .section-header {
         font-size: 35px;
     }
-    
     .font-size21,
     #quote p {
         font-size: 18px;
