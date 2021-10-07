@@ -16,7 +16,7 @@ $(function () {
         var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
-            var top = $(this).offset().top - nav_height - 300,
+            var top = $(this).offset().top - nav_height - 200,
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom) {
