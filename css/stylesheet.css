@@ -199,7 +199,8 @@ p, .projects-container ul li {
 /*-------------- MY SERVICES
 -------------- */
 
-.section-header {
+.section-header,
+.mockup h2  {
     font-size: 50px;
 }
 
@@ -267,10 +268,6 @@ p, .projects-container ul li {
 
 .all-btn:hover {
     color: #fff;
-}
-
-.mockup h2 {
-    font-size: 54px;
 }
 
 .mockup img {
