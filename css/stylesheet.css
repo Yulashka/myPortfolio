@@ -26,7 +26,7 @@ h6 {
 }
 
 a {
-    color: #00CCCB;
+    color: #a78243;
     -webkit-transition: color .15s ease-out;
     transition: color .15s ease-out;
 }
@@ -73,7 +73,7 @@ a:focus {
 --------------------*/
 
 .main-color {
-    color: #00CCCB !important;
+    color: #a78243 !important;
 }
 
 #main-nav {
@@ -85,6 +85,10 @@ a:focus {
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
+}
+
+.navbar-nav {
+    font-weight: bold;
 }
 
 #main-nav .container {
@@ -99,8 +103,10 @@ a:focus {
 }
 
 #nav-icon p {
-    padding-top: 25px;
+    padding-top: 5px;
     line-height: 25px;
+    font-size: 40px;
+    font-family: 'Roboto', serif;
 }
 
 #main-nav.scrolled {
@@ -108,8 +114,7 @@ a:focus {
     border-bottom: 1px solid #b9c4cC;
 }
 
-#main-nav.scrolled .navigation-bar:after,
-{
+#main-nav.scrolled .navigation-bar:after {
     position: absolute;
     height: 30px;
     right: -30px;
@@ -145,50 +150,45 @@ a:focus {
 #site-nav .active,
 #site-nav a:hover {
     padding-top: 4px;
-    color: #00CCCB !important;
+    color: #a78243 !important;
     background: none;
-}
-
-#site-nav a .fa {
-    display: block;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-#site-nav ul li + li {
-    border-left: 1px solid #b9c4cC;
 }
 
 /*---------------------
 ---- Header Styles ----
 -----------------------*/
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow-x: hidden;
+    margin-top: 40px;
+}
 
 #home {
-    background-attachment: fixed;
-    background-size: cover;
-    background: url(../pics/table.jpg);
-    position: relative;
-    height: 100%;
-    overflow: hidden;
+    margin-top: 50px;
 }
 
-#home .row {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 40%;
-}
-
-#home{
-    text-align: center;
-}
-
-.d-title {
-    word-spacing: 10px;
+#home .container {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 62px;
     color: #39444C;
 }
 
@@ -202,7 +202,7 @@ p, .projects-container ul li {
 -------------- */
 
 .section-header {
-    font-size: 62px;
+    font-size: 55px;
 }
 
 .service-item .service-icon {
@@ -224,7 +224,7 @@ p, .projects-container ul li {
 }
 
 .service-item:hover .fa {
-    color: #00CCCB;
+    color: #a78243 !important;
     transition-duration: 1s;
     transition-delay: 0.1s;
     -webkit-transition-duration: .3s;
@@ -246,16 +246,13 @@ p, .projects-container ul li {
 /*--------------------------------
              MY LATEST PROJECTS
 -------------------------------- */
-#projects {
-	background-color: #f6f6f6;
-}
 
 .button:hover {
-    color: #00CCCB !important;
+    color: #a78243 !important;
 }
 
 .button:active, .button {
-    color: #00CCCB !important;
+    color: #a78243 !important;
 }
  
 .button {
@@ -281,75 +278,16 @@ p, .projects-container ul li {
 .mockup img {
     margin-top: 30px;
 }
-/*-------------------------QUOTE
-----------------------------------*/
-
-#quote {
-    background-color: #00CCCB;
-}
-
-#quote a:active {
-    color: #fbfbfc;
-}
-
-#quote p {
-    font-size: 32px;
-}
 /*-------------------------MY PROFILE
 ----------------------------------*/
-
-#profile h2 {
-    word-spacing: 10px;
-}
-
 
 #profile #about-text {
     word-spacing: 5px;
     word-wrap: break-word;
 }
 
-.list-unstyled {
+.test{
      margin-top: 15px;
-}
-
-/*-------------------------SKILLS
-----------------------------------*/
-
-#skills {
-    background-color: #11161b;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-}
-
-.chart {
-    position: relative;
-    color: #1eefe8;
-}
-
-.chart .percent {
-    position: absolute;
-    width: 100%;
-    font-size: 42px;
-    text-align: center;
-    margin-top: 70px;
-}
-
-.chart .percent:after {
-    content: "%";
-    font-size: 70%;
-}
-
-.skills h3 {
-    color: #69747C;
-}
-
-.skills .chart {
-    display: inline-block;
-}
-
-.dark-bg {
-    background: #11161b;
-    color: #a9b4bC;
 }
 
 /*--------------------------------
@@ -408,7 +346,7 @@ p, .projects-container ul li {
     height: 100%;
     top: 0;
     left: 0;
-    background: #00CCCB;
+    background: #a78243;
     opacity: .9;
     z-index: -1;
 }
@@ -416,7 +354,7 @@ p, .projects-container ul li {
 .hover-title h2 {
     position: absolute;
     width: 100%;
-    bottom: 50%;
+    bottom: 60%;
     margin: 0 0 10px;
     line-height: 21px;
 }
@@ -431,12 +369,16 @@ p, .projects-container ul li {
 .hover-title p {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 35%;
     margin: 10px 0 0;
     line-height: 21px;
     font-style: italic;
     padding-left: 2px;
     padding-right: 2px;
+}
+
+.hover-p {
+    font-size: 12px;
 }
 
 .projects-container {
@@ -448,38 +390,34 @@ p, .projects-container ul li {
 /* -----------------CONTACT
 ------------------------ */
 
-#contact-form {
-    position: relative;
-}
-
 #contact {
-    background-image: url("../pics/map.jpg");
-    background-position-x: 50%;
+    background-image: url("../pics/leaves.jpg");
+    background-position-x: 0%;
     background-position-y: 50%;
-    background-size: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-    margin-bottom: 30px;
+    background-size: cover;
+    background-origin: unset;
 }
 
-.input {
-    border: none;
-    border-radius: 0;
-    border-bottom: 2px solid #fff;
-    background: transparent;
+#contact p {
+    color: black;
+    font-weight: bold;
 }
 
-#contact-form #name {
-    margin-bottom: 20px;
+.fa-linkedin:hover {
+    opacity: 0.7;
 }
 
-.form-control {
-    color: #fff;
-    font-size: 1.2em;
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
-
 /* -----------------FOOTER
 ------------------------ */
 
@@ -497,10 +435,6 @@ footer {
 .padding-lg {
     padding-bottom: 70px;
 }
-/*.padding-md{
-    padding-bottom: 50px;
-    padding-top: 50px}
-*/
 
 .padding-md {
     padding-bottom: 40px;
@@ -518,6 +452,16 @@ footer {
 .margin-md {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.margin-bt-lg {
+    margin-bottom: 60px
+}
+
+/* -----------------Colors
+------------------------ */
+.gray-bg {
+    background-color: #f6f6f6;
 }
 
 /* back to top button */
@@ -561,24 +505,6 @@ footer {
 }
 
 /*------------------
------- Modal------
---------------------*/
-.modal-button-green:hover {
-    color: #67b746 !important;
-}
-
-.modal-button-green:active, .modal-button-green {
-    color: #67b746 !important;
-}
-
-.modal-button-red:hover {
-    color: #c86f6f  !important;
-}
-
-.modal-button-red:active, .modal-button-red {
-    color: #c86f6f  !important;
-}
-/*------------------
 ------ Media Queries------
 --------------------*/
 
@@ -606,7 +532,6 @@ footer {
     }
 }
 
-
 @media (max-width: 611px) {
     h1,
     .section-header {
@@ -619,6 +544,13 @@ footer {
     }
     .font-size25px {
         font-size: 21px;
+    }
+    .textHeader {
+        padding-left: 15px;
+        padding-right: 15px;;
+    }
+    header {
+        padding-bottom: 70px;;
     }
 }
 
@@ -643,15 +575,10 @@ footer {
     }
     #site-nav .active a,
     #site-nav a:hover {
-        padding: 10px 30px;
-        color: #00CCCB !important;
-        background: none;
+        color: #a78243 !important;
     }
-    #home .row {
-        position: absolute;
-        width: 100%;
-        top: 40%;
-        left: auto;
+    .textHeader h1 {
+        font-size: 45px;
     }
 }
 
@@ -664,20 +591,13 @@ footer {
         width: 42%;
     }
 }
-
-@media (max-width: 986px) {
-    #skills .skills div {
-        margin-bottom: 50px;
+@media (min-width: 611px) {
+    .imageHeader {
+        width: 50%;;
+    }
+    .textHeader {
+    width: 50%;
+    position: relative;
+    right: 5%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-

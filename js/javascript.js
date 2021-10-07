@@ -16,7 +16,7 @@ $(function () {
         var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
-            var top = $(this).offset().top - nav_height,
+            var top = $(this).offset().top - nav_height - 300,
                 bottom = top + $(this).outerHeight();
 
             if (cur_pos >= top && cur_pos <= bottom) {
@@ -26,13 +26,6 @@ $(function () {
         });
     });
 
-	$('.chart').easyPieChart({
-			//your configuration goes here
-			barColor: '#1eefe8',
-			size: 210,
-			trackColor: '#11161b',
-			scaleColor: '#11161b',
-		});
     $('.animate').addClass("fade");
 
     var aniFunc = function () {
@@ -63,31 +56,4 @@ $(function () {
         }, duration);
         return false;
     })
-
-     //callback handler for form submit
-    $("#contact-form").submit(function(e)
-    {
-        $("#contactProgress").modal("show")
-
-        var data = $("#contact-form").serialize();
-    
-        $.ajax(
-        {
-            type: "POST",
-            url: "email.php",
-            data: data
-        }).done(function( msg ) {
-            $("#contactProgress").modal("hide")
-            $("#contactSuccess").modal("show")
-            $('#contact-form')[0].reset();
-        }).fail(function( jqXHR, textStatus ) {
-            $("#contactProgress").modal("hide")
-            $("#contactFail").modal("show")
-            $('#contact-form')[0].reset();
-            console.log(jqXHR.status) 
-        });
-        e.preventDefault(); //STOP default action
-        return true;
-    });
-
 });
