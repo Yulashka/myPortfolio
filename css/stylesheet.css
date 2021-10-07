@@ -57,7 +57,8 @@ a:focus {
     font-size: 16px;
 }
 
-.white {
+.white,
+.white p {
     color: #fff;
 }
 
